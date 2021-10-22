@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alasan Bahagia Hari Ini</title>
+    </head>
+    <body id="body">
+        <label for="color">Select Theme :</label>
+        <select name="color" id="color" onchange="tema()">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+    <script>
+        function tema(){
+            var pilihanwarna=document.getElementById("color");
+    
+            if(pilihanwarna.value=="light"){
+                document.body.style.backgroundColor = "white";
+                document.getElementById("body").style.color = "black";
+            }else{
+                document.body.style.backgroundColor = "black";
+                document.getElementById("body").style.color = "white";
+            }
+    
+        }
+    </script>
+    
+        <h1>This is my website</h1>
+
+        <p id="choice">AYOOOO PILIHHHH</p>
+        <label for="kata">Pilih apa yang buat kamu bahagia hari ini</label>
+        <select name="kata" id="kata" onchange="tujuan()">
+            <option value="Nonton">Nonton</option>
+            <option value="Jajan">Jajan</option>
+            <option value="Rebahan">Rebahan</option>
+        </select>
+        
+        <script>
+            function tujuan(){
+                var kegiatan=document.getElementById("kata");
+    
+                if(kegiatan.value=="Nonton"){
+                    var tempat=document.getElementById("choice");
+                    tempat.innerText = "Wajin Nyiapin Laptop/HP, Cemilan, WiFi";
+                }else if(kegiatan.value=="Jajan"){
+                    var tempat=document.getElementById("choice");
+                    tempat.innerText = "Sangat amat wajib untuk nyiapin uang banyak banyak";
+                }else if(kegiatan.value=="Rebahan"){
+                    var tempat=document.getElementById("choice");
+                    tempat.innerText = "Biar tambah nyaman rebahannya pokoknya wajib punyo kuota yang banyak biar lancar skroll tiktoknya";
+                }
+            }
+        </script>
+    
+    <h2>Pengecekan Faktorial</h2>
+    <h2>Input Number: </h2>
+    <input type="number" name="angka" id="num">
+    <button type="submit" onclick="faktorial()">Get Factorial</button>
+    
+    <script>
+        function faktorial(){
+            var faktor = document.getElementById("num");
+    
+              let hasil = 1;
+              if (faktor.value == 0){
+                hasil = 0;
+              }else if(faktor.value == 1){
+                  hasil=1;
+              }else{
+                for(var i = faktor.value; i >= 1; i--){
+                  hasil = hasil * i;
+                }
+              }
+             
+            var result = document.getElementById("hasil");
+                result.innerText = "Hasil Pemfaktoran = " + hasil;
+        }
+            
+    </script>
+    
+    <p id="hasil"></p>
+    
+    
+    </body>
+    </html>
